@@ -1,3 +1,6 @@
+\#*.*
+.\#*.*
+mytoken.py
 *.jpg
 *.gif
 *.pyc
