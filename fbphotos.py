@@ -21,7 +21,7 @@ def get_photos(dl_dir):
             img_name = img_url.split('/')[-1]
             url = urllib2.urlopen(img_url)
             
-            with open("%s/%s/%s" % (dest, folder, img_name), 'w') as f:
+            with open("%s/%s/%s" % (dest, folder, img_name), 'wb') as f:
                 meta = url.info()
                 filesize = int(meta.getheaders("Content-Length")[0])
                 filesize_dl = 0

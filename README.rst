@@ -1,4 +1,4 @@
-**Dependencies:** `facepy <https://github.com/jgorset/facepy>`_
+**Dependencies:** `facepy <https://github.com/jgorset/facepy>`_, Python 2.7 or earlier.
 
 I'm going to be hitting the eject button on Facebook soon, but the one thing I really wanted to save was my photos, and move them over to Picasa for Google+. There's no easy (or at least obvious) way to export all your photos in one fell swoop. So, I wrote a Python script that will do so.
 
