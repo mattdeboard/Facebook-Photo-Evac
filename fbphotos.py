@@ -24,7 +24,6 @@ def get_photos(dl_dir):
             with open("%s/%s/%s" % (dest, folder, img_name), 'w') as f:
                 meta = url.info()
                 filesize = int(meta.getheaders("Content-Length")[0])
-                #print "Downloading: %s Bytes: %s" % (img_name, filesize)
                 filesize_dl = 0
                 blocksize = 8192
                 while True:
@@ -37,7 +36,6 @@ def get_photos(dl_dir):
                     status = r"%10d [%3.2f%%]" % (filesize_dl,
                                                   filesize_dl * 100. / filesize)
                     status = status + chr(8)*(len(status)+1)
-                    #print status,
     
 def find_photos():
     '''
@@ -68,9 +66,8 @@ if __name__ == "__main__":
     parser.add_option("-d", "--dest", action="store", type="string",
                       dest="dest_dir", default=os.getcwd(),
                       help=("Specify the directory where you want your photos t"
-                            "o be downloaded. This directory must already exist"
-                            ". Photos will be downloaded to current working dir"
-                            " by default."))
+                            "o be downloaded. Photos will be downloaded to curr"
+                            "ent working dir by default."))
     args = sys.argv[1:]
     (options, args) = parser.parse_args(args)
     get_photos(options.dest_dir)
