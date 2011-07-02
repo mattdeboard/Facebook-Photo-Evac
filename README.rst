@@ -1,3 +1,4 @@
+**Dependencies:** `facepy <https://github.com/jgorset/facepy>`_
 
 I'm going to be hitting the eject button on Facebook soon, but the one thing I really wanted to save was my photos, and move them over to Picasa for Google+. There's no easy (or at least obvious) way to export all your photos in one fell swoop. So, I wrote a Python script that will do so.
 
@@ -16,3 +17,4 @@ Usage Instructions
 
 
 If you spot any bumps or hiccups, please let me know. I suspect the regex that handles substring substitution is a weakspot, but it worked for me. Also, if you have any suggestions to make this better, easier, let me know. This is pretty quick and dirty.
+
