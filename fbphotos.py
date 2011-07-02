@@ -63,9 +63,8 @@ if __name__ == "__main__":
     parser.add_option("-d", "--dest", action="store", type="string",
                       dest="dest_dir", default=os.getcwd(),
                       help=("Specify the directory where you want your photos t"
-                            "o be downloaded. This directory must already exist"
-                            ". Photos will be downloaded to current working dir"
-                            " by default."))
+                            "o be downloaded. Photos will be downloaded to curr"
+                            "ent working dir by default."))
     args = sys.argv[1:]
     (options, args) = parser.parse_args(args)
     get_photos(options.dest_dir)
