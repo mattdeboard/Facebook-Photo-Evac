@@ -24,7 +24,6 @@ def get_photos(dl_dir):
             with open("%s/%s/%s" % (dest, folder, img_name), 'w') as f:
                 meta = url.info()
                 filesize = int(meta.getheaders("Content-Length")[0])
-                #print "Downloading: %s Bytes: %s" % (img_name, filesize)
                 filesize_dl = 0
                 blocksize = 8192
                 while True:
@@ -34,10 +33,6 @@ def get_photos(dl_dir):
 
                     filesize_dl += blocksize
                     f.write(buff)
-                    status = r"%10d [%3.2f%%]" % (filesize_dl,
-                                                  filesize_dl * 100. / filesize)
-                    status = status + chr(8)*(len(status)+1)
-                    #print status,
     
 def find_photos():
     '''
@@ -59,7 +54,7 @@ def mk_album_dirs(dest, album):
     Create a subfolder for each facebook album.
     '''
     if not os.path.exists("%s/%s" % (dest, album)):
-        os.mkdir("%s/%s" % (dest, album))
+        os.makedirs("%s/%s" % (dest, album))
     return
 
 if __name__ == "__main__":
